@@ -119,17 +119,18 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to track decisions using Google Analytics
-window.trackDecision = function(decisionLabel) {
-    if (typeof gtag === "function") {
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.trackDecision = function(decisionLabel) {
+    if (window.gtag && typeof gtag === "function") {
         gtag('event', 'make_decision', {
             'event_category': 'Story Decisions',
             'event_label': decisionLabel
         });
     } else {
-        console.log("Google Analytics not available.");
+        console.error("Google Analytics not available.");
+        setTimeout(() => trackDecision(decisionLabel), 1000); // Retry after 1 second
     }
-};</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
+};
+</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
 
 It&#39;s good that you have experienced all of these emotions at some point or that you are open to experiencing them. 
 
