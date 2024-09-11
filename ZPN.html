@@ -119,35 +119,17 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.processCheckboxes = function() {
-    var anyChecked = false;
-    var checks = [
-        {id: 'back', varName: 'backPain'},
-        {id: 'neck', varName: 'neckPain'},
-        {id: 'shoulder', varName: 'shoulderPain'},
-        {id: 'hip', varName: 'hipPain'},
-        {id: 'knee', varName: 'kneePain'},
-        {id: 'foot', varName: 'footPain'},
-        {id: 'migraines', varName: 'hasMigraines'},
-        {id: 'fibromyalgia', varName: 'hasFibromyalgia'},
-        {id: 'other', varName: 'otherPain'} // Handling the 'Other' variable
-    ];
-
-    // Check each checkbox and set the corresponding SugarCube variable
-    checks.forEach(function(check) {
-        var isChecked = $('#' + check.id).is(":checked");
-        State.variables[check.varName] = isChecked;
-        if (isChecked) anyChecked = true;
-    });
-
-    // Ensure at least one checkbox is checked before continuing
-    if (!anyChecked) {
-        alert("Please select at least one checkbox.");
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to track decisions using Google Analytics
+window.trackDecision = function(decisionLabel) {
+    if (typeof gtag === "function") {
+        gtag('event', 'make_decision', {
+            'event_category': 'Story Decisions',
+            'event_label': decisionLabel
+        });
     } else {
-        Engine.play("Yes it is one of these"); // Replace "NextPassage" with your target passage name
+        console.log("Google Analytics not available.");
     }
-};
-</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Begin" tags="" position="100,150" size="100,100">Are you suffering from chronic pain?
+};</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Begin" tags="" position="100,150" size="100,100">Are you suffering from chronic pain?
 
 [[Yes-&gt;I suffer from chronic pain]]
 
@@ -711,7 +693,9 @@ This emotion is anger.
 
 How do you feel about anger?
 
-[[I am never angry-&gt;Anger avoidant]]
+&lt;&lt;link &quot;I am never angry&quot; &quot;Anger avoidant&quot;&gt;&gt;
+    &lt;&lt;run trackDecision(&quot;I am never angry&quot;)&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 [[I avoid being angry because its pointless-&gt;Anger avoidant]]
 
@@ -1290,7 +1274,7 @@ Do the exericise that you love to do, whether it is taking long walks, hikes, ru
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V0                    ║
+║                  Va                    ║
 ║                                        ║
 ║                 [[Begin]]                  ║
 ║                                        ║
