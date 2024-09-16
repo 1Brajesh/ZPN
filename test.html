@@ -119,14 +119,17 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Initialize the Google Analytics tags
-importScript('https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL');
-
-// Setup Google Analytics
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-73ZBHD5RXL');
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Append Google Analytics script to the document head
+document.head.appendChild(Object.assign(document.createElement('script'), {
+    async: true,
+    src: 'https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL',
+    onload: function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-73ZBHD5RXL');
+    }
+}));
 
 
 window.trackDecision = function(decisionLabel) {
@@ -221,7 +224,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-2xtags.2                 ║
+║                  V-2xtags.3                 ║
 ║                    code in js story                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
