@@ -119,15 +119,15 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Initialize the Google Analytics tags
+importScript('https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL');
 
-  gtag('config', 'G-73ZBHD5RXL');
-</script>
+// Setup Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-73ZBHD5RXL');
+
 
 window.trackDecision = function(decisionLabel) {
     if (window.gtag && typeof gtag === "function") {
@@ -221,7 +221,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-2xtags                 ║
+║                  V-2xtags.2                 ║
 ║                    code in js story                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
