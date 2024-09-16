@@ -119,20 +119,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Append Google Analytics script to the document head
-document.head.appendChild(Object.assign(document.createElement('script'), {
-    async: true,
-    src: 'https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL',
-    onload: function() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-73ZBHD5RXL');
-    }
-}));
-
-
-window.trackDecision = function(decisionLabel) {
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.trackDecision = function(decisionLabel) {
     if (window.gtag && typeof gtag === "function") {
         gtag('event', 'make_decision', {
             'event_category': 'Story Decisions',
@@ -142,7 +129,18 @@ window.trackDecision = function(decisionLabel) {
         console.error("Google Analytics not available.");
     }
 };
-</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
+</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">For test site healyourpain.carrd.co
+&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;G-73ZBHD5RXL&#39;);
+&lt;/script&gt;
+
+Excellent.
 
 It&#39;s good that you have experienced all of these emotions at some point or that you are open to experiencing them. 
 
@@ -224,8 +222,8 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-2xtags.3                 ║
-║                    code in js story                    ║
+║                  V-2xtags.4                 ║
+║                    back to orig in passage                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
 ║                                        ║
@@ -235,6 +233,47 @@ You are making excellent progress having reached this point.
 
 
 
+</tw-passagedata><tw-passagedata pid="5" name="Code" tags="" position="1050,400" size="100,100">Inside passage:
+
+For test site healyourpain.carrd.co
+&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;G-73ZBHD5RXL&#39;);
+&lt;/script&gt;
+
+
+
+Direct to Js story :
+(seems to say GA not available when I do it this way in console error)
+
+// Append Google Analytics script to the document head
+document.head.appendChild(Object.assign(document.createElement(&#39;script&#39;), {
+    async: true,
+    src: &#39;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&#39;,
+    onload: function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag(&#39;js&#39;, new Date());
+        gtag(&#39;config&#39;, &#39;G-73ZBHD5RXL&#39;);
+    }
+}));
+
+
+window.trackDecision = function(decisionLabel) {
+    if (window.gtag &amp;&amp; typeof gtag === &quot;function&quot;) {
+        gtag(&#39;event&#39;, &#39;make_decision&#39;, {
+            &#39;event_category&#39;: &#39;Story Decisions&#39;,
+            &#39;event_label&#39;: decisionLabel
+        });
+    } else {
+        console.error(&quot;Google Analytics not available.&quot;);
+    }
+};
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
