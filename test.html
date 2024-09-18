@@ -119,25 +119,14 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Google Analytics initialization
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-
-// Load the gtag.js script
-var script = document.createElement('script');
-script.async = true;
-script.src = 'https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL';
-document.head.appendChild(script);
-
-// Initialize Google Analytics
-gtag('js', new Date());
-gtag('config', 'G-73ZBHD5RXL');
-
-
-window.trackDecision = function(decisionLabel) {       
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.trackDecision = function(decisionLabel) {
+       
   console.log("In the function trackdecision");
+
     if (window.gtag && typeof gtag === "function") {
+       
       console.log("In the gtag==function trackdecision");
+
         gtag('event', 'make_decision', {
             'event_category': 'Story Decisions',
             'event_label': decisionLabel
@@ -147,7 +136,22 @@ window.trackDecision = function(decisionLabel) {
     }
 };
 
-</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
+</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+var script = document.createElement(&#39;script&#39;);
+script.async = true;
+script.src = &#39;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&#39;;
+document.head.appendChild(script);
+
+// Initialize Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag(&#39;js&#39;, new Date());
+gtag(&#39;config&#39;, &#39;G-73ZBHD5RXL&#39;);
+&lt;/script&gt;
+
+Excellent.
 
 It&#39;s good that you have experienced all of these emotions at some point or that you are open to experiencing them. 
 
@@ -163,7 +167,9 @@ How do you feel about anger?
     &lt;&lt;run trackDecision(&quot;I am never angry&quot;)&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-[[I avoid being angry because its pointless-&gt;Anger avoidant]]
+&lt;&lt;link &quot;I avoid being angry because its pointless&quot; &quot;Anger avoidant&quot;&gt;&gt;
+    &lt;&lt;run trackDecision(&quot;I avoid being angry because its pointless&quot;)&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 [[I am afraid of being angry because I may lose control of myself-&gt;Anger avoidant]]
 
@@ -232,7 +238,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-adrian-bk-head                 ║
+║                  V-adrian-git-works                 ║
 ║                    back to orig in passage                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
