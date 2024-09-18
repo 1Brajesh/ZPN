@@ -136,15 +136,10 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 
 
 
-
-window.trackDecision = function(decisionLabel) {
-       
+window.trackDecision = function(decisionLabel) {       
   console.log("In the function trackdecision");
-
     if (window.gtag && typeof gtag === "function") {
-       
       console.log("In the gtag==function trackdecision");
-
         gtag('event', 'make_decision', {
             'event_category': 'Story Decisions',
             'event_label': decisionLabel
@@ -166,8 +161,9 @@ This emotion is anger.
 
 How do you feel about anger?
 
-&lt;&lt;link &quot;I am never angry&quot; &quot;Anger avoidant&quot;&gt;&gt;
-    &lt;&lt;run trackDecision(&quot;I am never angry&quot;)&gt;&gt;
+&lt;&lt;link &quot;I am never angry&quot;&gt;&gt;
+     &lt;&lt;run trackDecision(&quot;I am never angry&quot;)&gt;&gt;
+    &lt;&lt;goto &#39;Anger avoidant&#39;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
 &lt;&lt;link &quot;I avoid being angry because its pointless&quot; &quot;Anger avoidant&quot;&gt;&gt;
@@ -249,7 +245,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-git-jshead                 ║
+║                  V-git-jshead+link                 ║
 ║                    back to orig in passage                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
