@@ -120,7 +120,13 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   font-size: 24px;
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">window.trackDecision = function(decisionLabel) {
+       
+  console.log("In the function trackdecision");
+
     if (window.gtag && typeof gtag === "function") {
+       
+      console.log("In the gtag==function trackdecision");
+
         gtag('event', 'make_decision', {
             'event_category': 'Story Decisions',
             'event_label': decisionLabel
@@ -129,8 +135,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
         console.error("Google Analytics not available.");
     }
 };
-</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">For test site healyourpain.carrd.co
-&lt;!-- Google tag (gtag.js) --&gt;
+</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">&lt;!-- Google tag (gtag.js) --&gt;
 &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   window.dataLayer = window.dataLayer || [];
