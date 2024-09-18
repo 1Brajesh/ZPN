@@ -119,7 +119,25 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 .big-text {
   font-size: 24px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.trackDecision = function(decisionLabel) {
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Dynamically load the Google Analytics script
+(function(){
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL';
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+
+    gtag('config', 'G-73ZBHD5RXL');
+})();
+
+
+
+
+window.trackDecision = function(decisionLabel) {
        
   console.log("In the function trackdecision");
 
@@ -136,22 +154,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
     }
 };
 
-</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">&lt;!-- Google tag (gtag.js) --&gt;
-&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-var script = document.createElement(&#39;script&#39;);
-script.async = true;
-script.src = &#39;https://www.googletagmanager.com/gtag/js?id=G-73ZBHD5RXL&#39;;
-document.head.appendChild(script);
-
-// Initialize Google Analytics
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag(&#39;js&#39;, new Date());
-gtag(&#39;config&#39;, &#39;G-73ZBHD5RXL&#39;);
-&lt;/script&gt;
-
-Excellent.
+</script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
 
 It&#39;s good that you have experienced all of these emotions at some point or that you are open to experiencing them. 
 
@@ -246,7 +249,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  V-git-worksx6-two-tag                 ║
+║                  V-git-jshead                 ║
 ║                    back to orig in passage                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
