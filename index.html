@@ -242,6 +242,18 @@ window.trackDecision = function(decisionLabel) {
     }
 };
 
+$(document).one(":passagedisplay", function () {
+    // Create the button
+    var feedbackButton = $('<button/>', {
+        text: 'Feedback', // Text on the button
+        click: function () {
+            window.open('https://your-feedback-form-link.com', '_blank'); // Link to your feedback form
+        }
+    });
+
+    // Add the button to the UI bar
+    $('#ui-bar').append(feedbackButton);
+});
 </script><tw-tag name="Recap" color="green"></tw-tag><tw-tag name="Emotions-table" color="red"></tw-tag><tw-tag name="List-of-diagnosis" color="orange"></tw-tag><tw-tag name="Personality-traits" color="blue"></tw-tag><tw-tag name="Stressors-list" color="purple"></tw-tag><tw-tag name="A-list-of-things" color="orange"></tw-tag><tw-passagedata pid="1" name="Anger" tags="" position="350,150" size="100,100">Excellent.
 
 It&#39;s good that you have experienced all of these emotions at some point or that you are open to experiencing them. 
@@ -343,7 +355,7 @@ You are making excellent progress having reached this point.
 ║└──────────────────────────────────────┘║                                        ║
 ║                                        ║
 ║                                        ║
-║                  Vg                ║
+║                  Vi                ║
 ║                                                    ║
 ║                 [[Anger]]                  ║
 ║                                        ║
