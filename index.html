@@ -104,120 +104,80 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Healyourpain Testing" startnode="4" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="14f39ac7-a41a-4789-9961-21d7a2918d8a" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
-  background-color: pink;
-    color: white;
-  font-family: Garamond;
-  font-size: 150%   
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.red-text {
-  font-size: 24px;
-  color: red;
-}
-.green-text {
-  font-size: 24px;
-  color: green;
-}
-.blue-text {
-  font-size: 24px;
-  color: blue;
-}
-.big-text {
-  font-size: 24px;
-}
-
-#ui-bar {
-/*    display: none; */
-    background-image: url("time small.jpg"); 
-    background-size: cover; 
-    background-position: center; 
-}
-
-
-.outer-border {
-  
-  border: 3px double #333; 
-  width: auto; 
-
-  padding: 20px; 
-  font-family: 'Courier New', monospace; 
-  text-align: center; 
-}
-
-.content {
-  border: 1px solid #333; 
-  width: auto; 
-  padding: 10px;
-  margin: 20px; 
-}
-
-.title, .subtitle {
-  border: 1px dashed #333; /* Dashed border around titles */
-  padding: 5px;
-  margin: 10px auto; /* Centering the titles horizontally */
-  max-width: 90%; /* Maximum width of titles */
-}
-
-.link a {
-  color: #333; /* Link color */
-  text-decoration: none; /* Remove underline from links */
-}
-
-.link a:hover {
-  text-decoration: underline; /* Underline on hover for better visibility */
-}
-
-
-
-
-
-
-/*
-a {
-  color: Tomato;
-}
-
-a.hover {
-  color: Crimson;
-  border-bottom: 5px solid blue;
-  text-decoration: none;
-}
-
-.A-list-of-things {
-  background-color: red;
-    color: white;
-}
-
-a.A-list-of-things {
-    color: black;
-}
-
-#ui-bar {
-    display: none;
-}
-
-#story {
-  margin-left: 3.5em
-}
-
-.alien:hover {
-  opacity: 0;
-  transition: 2s all ease;
-}
-
-
+	<tw-storydata name="Healyourpain Testing" startnode="4" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="14f39ac7-a41a-4789-9961-21d7a2918d8a" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Universal Styling (Applies to Both Desktop and Mobile) */
 body {
-background-image: url("darknight.webp");
+    background-color: #f7e7ce; /* Fallback background color */
+    background-image: url('parchment2.jpeg'); /* Parchment background image */
+    background-size: cover; /* Ensure the background covers the entire screen */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background stationary when scrolling */
+    color: black; /* Black text color */
+    font-family: 'Georgia', serif; /* Ancient-style serif font */
+    line-height: 1.6;
+    margin: 0; /* Remove default margins to avoid overflow on small screens */
+    padding: 0;
 }
 
-*/
+tw-story {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 90%; /* Makes sure the content isn't too wide on smaller screens */
+    margin: 10px auto; /* Centers the content with some spacing */
+}
 
+tw-passage {
+    max-width: 800px; /* Ideal for larger screens */
+    margin: 0 auto; /* Centers the text */
+    padding: 10px; /* Adds spacing inside the passage */
+    font-size: 18px; /* Default font size for readability */
+}
 
+a {
+    color: #7e5e31; /* Dark golden brown for links */
+    text-decoration: none;
+}
 
-  </style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).one(":passagedisplay", function () {
+a:hover {
+    text-decoration: underline; /* Hover effect for links */
+}
+
+/* Mobile-Specific Styling */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+        line-height: 1.4; /* Adjust line height for smaller screens */
+    }
+    
+    tw-story {
+        padding: 15px;
+        max-width: 100%; /* Allow the story container to take up the full width on small screens */
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9); /* Increase opacity for better readability on mobile */
+    }
+
+    tw-passage {
+        font-size: 16px; /* Decrease text size for mobile readability */
+        max-width: 100%; /* Full width for text on small screens */
+    }
+
+    a {
+        font-size: 16px; /* Ensure link text isn't too small on mobile */
+    }
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1200px) {
+    tw-story {
+        max-width: 60%; /* Restrict width on large screens for better readability */
+    }
+
+    tw-passage {
+        font-size: 20px; /* Slightly larger font size for large screens */
+    }
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).one(":passagedisplay", function () {
     // Create the button
     var feedbackButton = $('<button/>', {
         text: 'Feedback', // Text on the button
