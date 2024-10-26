@@ -392,17 +392,26 @@ You are making excellent progress having reached this point.
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Compulsive&lt;/label&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="9" name="Cover" tags="" position="125,25" size="100,100">&lt;div style=&quot;text-align: center; position: relative;&quot;&gt;
-    &lt;img src=&quot;title-flowery-good.jpeg&quot; alt=&quot;flower&quot; style=&quot;width: 100%; height: auto;&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="9" name="Cover" tags="" position="125,25" size="100,100">&lt;div style=&quot;position: relative; text-align: center; display: inline-block;&quot;&gt;
+    &lt;!-- Image --&gt;
+    &lt;img src=&quot;title-flowery-good.jpeg&quot; alt=&quot;Cover&quot; style=&quot;width: 100%; height: auto;&quot;/&gt;
 
     &lt;!-- Glowing button --&gt;
     &lt;a href=&quot;[[Title Page]]&quot; class=&quot;glow-button&quot;&gt;Begin&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;style&gt;
+    /* Container for button and image */
+    div {
+        max-width: 100%;
+    }
+
+    /* Glowing button */
     .glow-button {
-        display: inline-block;
-        margin-top: 20px;
+        position: absolute;
+        bottom: 20px; /* Adjust this value to move the button up/down */
+        left: 50%;
+        transform: translateX(-50%);
         padding: 15px 30px;
         font-size: 18px;
         color: white;
@@ -416,8 +425,14 @@ You are making excellent progress having reached this point.
     .glow-button:hover {
         box-shadow: 0 0 25px rgba(0, 191, 255, 1), 0 0 25px rgba(0, 191, 255, 1);
     }
-&lt;/style&gt;
 
+    /* Make sure the image is responsive */
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+&lt;/style&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
